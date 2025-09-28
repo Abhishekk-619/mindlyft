@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +17,20 @@ export const Navigation: React.FC = () => {
   }, []);
 
   const handleNavClick = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -65,18 +79,34 @@ export const Navigation: React.FC = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <motion.button
-            className="btn-hero px-6 py-2 text-sm"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
-            onClick={() => handleNavClick('contact')}
-          >
-            Get Started
-          </motion.button>
+          {/* Action Buttons */}
+          <div className="flex items-center space-x-4">
+            {/* Coming Soon Button */}
+            <motion.button
+              className="text-sm px-4 py-2 rounded-lg bg-gradient-to-r from-secondary via-secondary-glow to-accent text-white shadow-lg shadow-secondary/20 hover:shadow-secondary/40 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              onClick={() => navigate('/coming-soon')}
+            >
+              Coming Soon
+            </motion.button>
+
+            {/* CTA Button */}
+            <motion.button
+              className="btn-hero px-6 py-2 text-sm"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              onClick={() => handleNavClick('contact')}
+            >
+              Get Started
+            </motion.button>
+          </div>
         </div>
       </div>
     </motion.nav>
