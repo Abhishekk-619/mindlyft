@@ -82,18 +82,24 @@ export const StatsSection: React.FC = () => {
         <div className="text-center mb-16">
           
 
-          <motion.h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6" initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.2
-        }} viewport={{
-          once: true
-        }}>
+          <motion.h2 
+            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent" 
+            initial={{
+              opacity: 0,
+              y: 20
+            }} 
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }} 
+            transition={{
+              duration: 0.8,
+              delay: 0.2
+            }} 
+            viewport={{
+              once: true
+            }}
+          >
             Proven Results
           </motion.h2>
 

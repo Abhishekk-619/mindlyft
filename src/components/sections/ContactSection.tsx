@@ -19,13 +19,12 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const services = [
-  "AI Strategy & Consulting",
-  "Intelligent Automation",
-  "Neural Network Solutions",
-  "AI-Powered Analytics",
-  "Computer Vision Systems",
-  "NLP & Conversational AI",
-  "Custom AI Development",
+  "Training & Workshops",
+  "AI-Driven Outreach & Cold Calling",
+  "AI-Powered Data Analytics",
+  "Automated Business Workflows",
+  "AI Content Generation & Optimization",
+  "AI Chatbots & Virtual Assistants",
   "Other"
 ];
 
@@ -121,7 +120,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-16 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -130,19 +129,20 @@ export const ContactSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 contact-title"
-        >
-          Get In Touch
-        </motion.h2>
+         initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold mb-5 text-white text-center">
+              Get <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">In Touch</span>
+            </motion.h2>
       
-            Ready to transform your business with AI? Let's discuss how our solutions 
-            can drive your success. Our experts are standing by to help.
+            <p className="text-xl text-[#A0AEC0] text-center mb-12">
+              Ready to transform your business with AI? Let's discuss how our solutions 
+              can drive your success. Our experts are standing by to help.
+            </p>
           
         </div>
 
@@ -155,7 +155,7 @@ export const ContactSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="premium-card rounded-2xl p-8 h-full">
-              <h3 className="text-3xl font-bold text-foreground mb-8">
+              <h3 className="text-3xl font-bold text-white mb-8">
                 Let's Start a Conversation
               </h3>
               
@@ -165,12 +165,12 @@ export const ContactSection: React.FC = () => {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📧</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Email Us</p>
-                    <p className="text-muted-foreground">contact@ailabs.com</p>
+                    <p className="font-semibold text-white">Email Us</p>
+                    <p className="text-[#A0AEC0]">mindlyftaiofficial@gmail.com</p>
                   </div>
                 </motion.div>
 
@@ -179,12 +179,12 @@ export const ContactSection: React.FC = () => {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📞</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Call Us</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="font-semibold text-white">Call Us</p>
+                    <p className="text-[#A0AEC0]">+919764221999 OR +918530888886</p>
                   </div>
                 </motion.div>
 
@@ -193,12 +193,12 @@ export const ContactSection: React.FC = () => {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📍</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Visit Us</p>
-                    <p className="text-muted-foreground">123 Innovation Drive, Tech Hub, CA 94025</p>
+                    <p className="font-semibold text-white">Visit Us</p>
+                    <p className="text-[#A0AEC0]">2nd Floor, ABC Tiara, Sector No. 26, Plot No. H.17, Opposite Akurdi Railway Station, Nigadi Pradhikaran, Pimpri-Chinchwad, Pune, Maharashtra,411044.</p>
                   </div>
                 </motion.div>
 
@@ -207,12 +207,12 @@ export const ContactSection: React.FC = () => {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🕒</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Business Hours</p>
-                    <p className="text-muted-foreground">Mon - Fri: 9:00 AM - 6:00 PM PST</p>
+                    <p className="font-semibold text-white">Business Hours</p>
+                    <p className="text-[#A0AEC0]">Mon - Fri: 9:00 AM - 6:00 PM IST</p>
                   </div>
                 </motion.div>
               </div>
@@ -227,7 +227,7 @@ export const ContactSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="premium-card rounded-2xl p-8">
-              <h3 className="text-3xl font-bold text-foreground mb-8">
+              <h3 className="text-3xl font-bold text-white mb-8">
                 Send us a Message
               </h3>
 

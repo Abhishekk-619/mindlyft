@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface AnimatedTextProps {
-  children: string;
+  children: React.ReactNode;
   className?: string;
   variant?: "gradient" | "glow" | "normal";
   delay?: number;
@@ -15,8 +15,6 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   variant = "normal",
   delay = 0
 }) => {
-  const letters = children.split("");
-
   const variants = {
     gradient: "gradient-text",
     glow: "text-primary glow-primary",
@@ -59,15 +57,15 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
       animate="visible"
       className={cn("inline-block", variants[variant], className)}
     >
-      {letters.map((letter, index) => (
-        <motion.span
+      {React.Children.map(children, (child, index) => (
+        <motion.div
           key={index}
           variants={child}
           className="inline-block"
           style={{ transformOrigin: "50% 100%" }}
         >
-          {letter === " " ? "\u00A0" : letter}
-        </motion.span>
+          {child}
+        </motion.div>
       ))}
     </motion.div>
   );

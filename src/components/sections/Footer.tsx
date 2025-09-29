@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const footerLinks = {
   services: [
-    "AI Strategy & Consulting",
-    "Intelligent Automation",
-    "Neural Network Solutions",
-    "AI-Powered Analytics",
-    "Computer Vision Systems",
-    "NLP & Conversational AI"
+    "Training & Workshops",
+    "AI-Driven Outreach & Cold Calling",
+    "AI-Powered Data Analytics",
+    "Automated Business Workflows",
+    "AI Content Generation & Optimization",
+    "AI Chatbots & Virtual Assistants"
   ],
   company: [
     "About Us",
@@ -89,10 +89,10 @@ export const Footer: React.FC = () => {
             {/* Company Info */}
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <div className="mb-6">
-                <h3 className="text-3xl font-bold text-foreground mb-4">
-                  mindlyft
+                <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent">
+                  Mindlyft AI
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-[#A0AEC0] leading-relaxed mb-6">
                   Transforming businesses through intelligent AI solutions. 
                   We specialize in cutting-edge automation, analytics, and 
                   neural network implementations that drive real results.
@@ -100,34 +100,18 @@ export const Footer: React.FC = () => {
               </div>
 
               {/* Social Links */}
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-xl hover:bg-primary/20 transition-colors duration-300"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
+              
             </motion.div>
 
             {/* Services */}
             <motion.div variants={itemVariants}>
-              <h4 className="text-lg font-bold text-foreground mb-6">Services</h4>
+              <h4 className="text-lg font-bold text-white mb-6">Services</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
                     <motion.a
                       href="#"
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                      className="text-[#A0AEC0] hover:text-[#2B85FF] transition-colors duration-300"
                       whileHover={{ x: 5 }}
                     >
                       {link}
@@ -139,13 +123,13 @@ export const Footer: React.FC = () => {
 
             {/* Company */}
             <motion.div variants={itemVariants}>
-              <h4 className="text-lg font-bold text-foreground mb-6">Company</h4>
+              <h4 className="text-lg font-bold text-white mb-6">Company</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
                     <motion.a
                       href="#"
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                      className="text-[#A0AEC0] hover:text-[#2B85FF] transition-colors duration-300"
                       whileHover={{ x: 5 }}
                     >
                       {link}
@@ -156,22 +140,7 @@ export const Footer: React.FC = () => {
             </motion.div>
 
             {/* Resources */}
-            <motion.div variants={itemVariants}>
-              <h4 className="text-lg font-bold text-foreground mb-6">Resources</h4>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link, index) => (
-                  <li key={index}>
-                    <motion.a
-                      href="#"
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                      whileHover={{ x: 5 }}
-                    >
-                      {link}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            
           </div>
         </motion.div>
 
@@ -186,24 +155,12 @@ export const Footer: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-muted-foreground">
-              © 2024 AI Labs. All rights reserved. Powered by innovation.
-            </div>
-            
-            <div className="flex flex-wrap gap-6">
-              {footerLinks.legal.map((link, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm"
-                  whileHover={{ y: -2 }}
-                >
-                  {link}
-                </motion.a>
-              ))}
-            </div>
-          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
+  <div className="text-[#A0AEC0] text-center">
+    © 2025 Mindlyft AI. All rights reserved. Designed and Developed by Sarthi Labs.
+  </div>
+</div>
+
         </motion.div>
       </div>
     </footer>

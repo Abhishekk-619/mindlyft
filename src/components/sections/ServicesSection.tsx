@@ -1,37 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { AnimatedText } from "@/components/ui/animated-text";
+import { Bot, BarChart3, Workflow, PenTool, Users, MessageCircle, Sparkles, ArrowUpRight } from "lucide-react";
 
 const services = [{
-  title: "AI Strategy & Consulting",
-  description: "Strategic AI roadmaps and digital transformation consulting to accelerate your business growth with cutting-edge solutions.",
-  icon: "🧠",
-  gradient: "from-primary to-primary-glow"
+  title: "Training & Workshops",
+  description: "Upskill your teams with hands-on training in AI, data science, and best practices to drive innovation and impact",
+  icon: <Users className="w-12 h-12 text-[#2B85FF]" />,
+  gradient: "from-[#2B85FF] to-[#00D1D1]"
 }, {
-  title: "Intelligent Automation",
-  description: "Advanced process automation using machine learning and AI to streamline operations and maximize efficiency.",
-  icon: "🤖",
-  gradient: "from-secondary to-secondary-glow"
+  title: "AI-Driven Outreach & Cold Calling",
+  description: "Leverage AI-powered personalization to run automated outreach campaigns that convert leads into customers.",
+  icon: <Bot className="w-12 h-12 text-[#A68CFF]" />,
+  gradient: "from-[#A68CFF] to-[#00D1D1]"
 }, {
-  title: "Neural Network Solutions",
-  description: "Custom neural networks and deep learning models tailored to solve complex business challenges and predictions.",
-  icon: "🧬",
-  gradient: "from-accent to-accent-glow"
+  title: "AI-Powered Data Analytics",
+  description: "Empower your business with advanced machine learning that transforms data into strategic intelligence.",
+  icon: <BarChart3 className="w-12 h-12 text-[#2B85FF]" />,
+  gradient: "from-[#2B85FF] via-[#A68CFF] to-[#00D1D1]"
 }, {
-  title: "AI-Powered Analytics",
-  description: "Transform raw data into actionable insights with advanced analytics, predictive modeling, and real-time intelligence.",
-  icon: "📊",
-  gradient: "from-primary to-secondary"
+  title: "Automated Business Workflows",
+  description: "Boost efficiency by streamlining operations through intelligent automation that eliminates manual tasks.",
+  icon: <Workflow className="w-12 h-12 text-[#2B85FF]" />,
+  gradient: "from-[#2B85FF] to-[#A68CFF]"
 }, {
-  title: "Computer Vision Systems",
-  description: "Revolutionary image recognition, object detection, and visual AI systems for next-generation applications.",
-  icon: "👁️",
-  gradient: "from-secondary to-accent"
+  title: "AI Content Generation & Optimization",
+  description: "Produce high-quality content at scale using AI-driven writing and optimization tools.",
+  icon: <PenTool className="w-12 h-12 text-[#A68CFF]" />,
+  gradient: "from-[#A68CFF] to-[#00D1D1]"
 }, {
-  title: "NLP & Conversational AI",
-  description: "Sophisticated natural language processing, chatbots, and conversational interfaces for enhanced user experiences.",
-  icon: "💬",
-  gradient: "from-accent to-primary"
+  title: "AI Chatbots & Virtual Assistants",
+  description: "Intelligent conversational AI solutions that provide 24/7 customer support and engagement..",
+  icon: <MessageCircle className="w-12 h-12 text-[#2B85FF]" />,
+  gradient: "from-[#2B85FF] via-[#A68CFF] to-[#00D1D1]"
 }];
 
 export const ServicesSection: React.FC = () => {
@@ -74,7 +75,7 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-16 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -83,17 +84,17 @@ export const ServicesSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16 services-title"
-          >
-            Transformative AI Solutions
+           initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold mb-5 text-white text-center">
+            Transformative <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">AI Solutions</span>
+            
           </motion.h2>
-          <p className="text-xl text-muted-foreground text-center mb-12">
+          <p className="text-xl text-[#A0AEC0] text-center mb-12">
             Comprehensive AI services designed to revolutionize your business processes, 
             enhance decision-making, and drive unprecedented growth in the digital era.
           </p>
@@ -120,7 +121,7 @@ export const ServicesSection: React.FC = () => {
               <div className="premium-card rounded-2xl p-8 h-full">
                 {/* Icon */}
                 <motion.div
-                  className="text-6xl mb-6 relative"
+                  className="mb-6 relative flex items-center justify-center"
                   whileHover={{
                     scale: 1.2,
                     rotate: 10
@@ -131,7 +132,7 @@ export const ServicesSection: React.FC = () => {
                     damping: 10
                   }}
                 >
-                  <div className="relative inline-block">
+                  <div className="relative">
                     {service.icon}
                     <motion.div
                       className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-20 blur-xl rounded-full`}
@@ -148,11 +149,11 @@ export const ServicesSection: React.FC = () => {
                 </motion.div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#2B85FF] transition-colors duration-300">
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-[#A0AEC0] leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -188,15 +189,15 @@ export const ServicesSection: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="premium-card rounded-2xl p-12 max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-[#A0AEC0] mb-8 leading-relaxed">
               Join the AI revolution and unlock your organization's full potential with our 
               comprehensive suite of intelligent solutions.
             </p>
             <motion.button
-              className="btn-hero px-6 py-2 text-sm"
+              className="btn-hero px-6 py-2 text-sm text-white inline-flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, x: 20 }}
@@ -205,11 +206,11 @@ export const ServicesSection: React.FC = () => {
               onClick={handleConsultationClick}
             >
               Schedule AI Consultation
+              <ArrowUpRight className="w-4 h-4" />
             </motion.button>
           </div>
         </motion.div>
       </div>
-      
     </section>
   );
 };
