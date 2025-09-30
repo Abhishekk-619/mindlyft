@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const footerLinks = {
   services: [
@@ -11,11 +12,8 @@ const footerLinks = {
     "AI Chatbots & Virtual Assistants"
   ],
   company: [
-    "About Us",
-    "Our Team",
-    "Careers",
-    "Press Kit",
-    "Partners",
+    "Services",
+    "About",
     "Contact"
   ],
   resources: [
@@ -44,6 +42,7 @@ const socialLinks = [
 ];
 
 export const Footer: React.FC = () => {
+  const navigate = useNavigate();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -89,10 +88,10 @@ export const Footer: React.FC = () => {
             {/* Company Info */}
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <div className="mb-6">
-                <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent">
+                <h3 className="text-3xl font-heading font-bold mb-4 bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent">
                   Mindlyft AI
                 </h3>
-                <p className="text-[#A0AEC0] leading-relaxed mb-6">
+                <p className="text-white/90 font-body leading-relaxed mb-6">
                   Transforming businesses through intelligent AI solutions. 
                   We specialize in cutting-edge automation, analytics, and 
                   neural network implementations that drive real results.
@@ -105,13 +104,13 @@ export const Footer: React.FC = () => {
 
             {/* Services */}
             <motion.div variants={itemVariants}>
-              <h4 className="text-lg font-bold text-white mb-6">Services</h4>
+              <h4 className="text-lg font-heading font-bold text-white mb-6">Services</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
                     <motion.a
                       href="#"
-                      className="text-[#A0AEC0] hover:text-[#2B85FF] transition-colors duration-300"
+                      className="text-white/90 font-body hover:text-[#2B85FF] transition-colors duration-300"
                       whileHover={{ x: 5 }}
                     >
                       {link}
@@ -123,19 +122,35 @@ export const Footer: React.FC = () => {
 
             {/* Company */}
             <motion.div variants={itemVariants}>
-              <h4 className="text-lg font-bold text-white mb-6">Company</h4>
+              <h4 className="text-lg font-heading font-bold text-white mb-6">Company</h4>
               <ul className="space-y-3">
-                {footerLinks.company.map((link, index) => (
-                  <li key={index}>
-                    <motion.a
-                      href="#"
-                      className="text-[#A0AEC0] hover:text-[#2B85FF] transition-colors duration-300"
-                      whileHover={{ x: 5 }}
-                    >
-                      {link}
-                    </motion.a>
-                  </li>
-                ))}
+                <li>
+                  <motion.div
+                    onClick={() => navigate('/services')}
+                    className="text-white/90 font-body hover:text-[#2B85FF] transition-colors duration-300 cursor-pointer"
+                    whileHover={{ x: 5 }}
+                  >
+                    Services
+                  </motion.div>
+                </li>
+                <li>
+                  <motion.div
+                    onClick={() => navigate('/about')}
+                    className="text-white/90 font-body hover:text-[#2B85FF] transition-colors duration-300 cursor-pointer"
+                    whileHover={{ x: 5 }}
+                  >
+                    About
+                  </motion.div>
+                </li>
+                <li>
+                  <motion.div
+                    onClick={() => navigate('/contact')}
+                    className="text-white/90 font-body hover:text-[#2B85FF] transition-colors duration-300 cursor-pointer"
+                    whileHover={{ x: 5 }}
+                  >
+                    Contact
+                  </motion.div>
+                </li>
               </ul>
             </motion.div>
 
@@ -156,11 +171,10 @@ export const Footer: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
-  <div className="text-[#A0AEC0] text-center">
-    © 2025 Mindlyft AI. All rights reserved. Designed and Developed by Sarthi Labs.
-  </div>
-</div>
-
+            <div className="text-white/90 font-body text-center">
+              © 2025 Mindlyft AI. All rights reserved.<span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent"> Designed and Developed by Sarthi Labs.</span> 
+            </div>
+          </div>
         </motion.div>
       </div>
     </footer>

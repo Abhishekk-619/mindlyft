@@ -55,7 +55,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
       variants={container}
       initial="hidden"
       animate="visible"
-      className={cn("inline-block", variants[variant], className)}
+      className={cn("inline-block font-body", variants[variant], className)}
     >
       {React.Children.map(children, (child, index) => (
         <motion.div

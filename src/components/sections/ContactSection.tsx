@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
@@ -135,11 +136,11 @@ export const ContactSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold mb-5 text-white text-center">
+              className="text-3xl md:text-4xl lg:text-5xl font-heading mb-5 text-white text-center">
               Get <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">In Touch</span>
             </motion.h2>
       
-            <p className="text-xl text-[#A0AEC0] text-center mb-12">
+            <p className="text-xl text-white/90 text-center mb-12 max-w-3xl mx-auto">
               Ready to transform your business with AI? Let's discuss how our solutions 
               can drive your success. Our experts are standing by to help.
             </p>
@@ -155,8 +156,8 @@ export const ContactSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="premium-card rounded-2xl p-8 h-full">
-              <h3 className="text-3xl font-bold text-white mb-8">
-                Let's Start a Conversation
+              <h3 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">Let's Start a Conversation</span>
               </h3>
               
               <div className="space-y-6">
@@ -166,7 +167,7 @@ export const ContactSection: React.FC = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📧</span>
+                    <MailIcon className="text-2xl" />
                   </div>
                   <div>
                     <p className="font-semibold text-white">Email Us</p>
@@ -180,11 +181,11 @@ export const ContactSection: React.FC = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📞</span>
+                    <PhoneIcon className="text-2xl" />
                   </div>
                   <div>
                     <p className="font-semibold text-white">Call Us</p>
-                    <p className="text-[#A0AEC0]">+919764221999 OR +918530888886</p>
+                    <p className="text-[#A0AEC0]">+91-9764221999 OR +91-8530888886</p>
                   </div>
                 </motion.div>
 
@@ -194,7 +195,7 @@ export const ContactSection: React.FC = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📍</span>
+                    <MapPinIcon className="w-6 h-6" />
                   </div>
                   <div>
                     <p className="font-semibold text-white">Visit Us</p>
@@ -208,11 +209,11 @@ export const ContactSection: React.FC = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🕒</span>
+                    <ClockIcon className="text-2xl" />
                   </div>
                   <div>
                     <p className="font-semibold text-white">Business Hours</p>
-                    <p className="text-[#A0AEC0]">Mon - Fri: 9:00 AM - 6:00 PM IST</p>
+                    <p className="text-[#A0AEC0]">Monday - Friday / 9:00 AM - 6:00 PM IST</p>
                   </div>
                 </motion.div>
               </div>
@@ -227,8 +228,8 @@ export const ContactSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="premium-card rounded-2xl p-8">
-              <h3 className="text-3xl font-bold text-white mb-8">
-                Send us a Message
+              <h3 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">Send us a Message</span>
               </h3>
 
               <motion.form 
@@ -299,14 +300,15 @@ export const ContactSection: React.FC = () => {
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="btn-hero w-full text-lg py-6"
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </motion.div>
+  <Button
+    type="submit"
+    disabled={isSubmitting}
+    className="w-full text-lg py-6 bg-blue-800 text-white hover:bg-blue-900"
+  >
+    {isSubmitting ? "Sending..." : "Send Message"}
+  </Button>
+</motion.div>
+
               </motion.form>
             </div>
           </motion.div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { VideoBackground } from "@/components/backgrounds/VideoBackground";
 import { AnimatedButton } from "@/components/ui/animated-button";
 import { AnimatedText } from "@/components/ui/animated-text";
 
@@ -14,9 +13,6 @@ export const HeroSection: React.FC = () => {
   
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <VideoBackground videoSrc="/Image_to_Cinematic_Video.mp4" />
-      
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/80" />
       
@@ -33,62 +29,34 @@ export const HeroSection: React.FC = () => {
         <div className="space-y-4 mb-12">
           <AnimatedText
             variant="gradient"
-            className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight md:leading-tight hero-title bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] text-transparent bg-clip-text"
+            className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold leading-tight md:leading-tight bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] text-transparent bg-clip-text"
             delay={0.5}
           >
             <div className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">Shaping Smarter</div>
             <br className="hidden md:block" />
-            <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">Businesses with</div>
+            <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent"> Businesses with</div>
             <br className="hidden md:block" />
-            <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">Intelligent AI Innovation</div>
+            <div className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">AI Innovation</div>
           </AnimatedText>
         </div>
 
         <motion.p
-          className="text-xl md:text-2xl text-[#A0AEC0] max-w-3xl mx-auto mb-12 leading-relaxed"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-lg md:text-xl font-body text-white/90 max-w-3xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
         >
-          Revolutionize your business with cutting-edge AI solutions, intelligent automation, 
-          and strategic digital innovation designed for the future.
+          Transform your business with cutting-edge AI solutions that drive growth, efficiency, and innovation.
         </motion.p>
 
-        <motion.button
-          className="btn-hero px-6 py-2 text-sm text-white"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, delay: 0.5 }}
-          onClick={handleExploreClick}
-        >
-          Explore AI Solutions
-        </motion.button>
-
-        {/* Stats */}
         <motion.div
-          className="grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 2.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
         >
-          {[].map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center"
-              whileHover={{ scale: 1.05 }}
-            >
-              <motion.div
-                className="text-3xl md:text-4xl font-bold text-[#2B85FF] mb-2"
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-              >
-                {stat.number}
-              </motion.div>
-              <div className="text-sm text-[#A0AEC0]">{stat.label}</div>
-            </motion.div>
-          ))}
+          <AnimatedButton onClick={handleExploreClick}>
+            Explore Our Services
+          </AnimatedButton>
         </motion.div>
       </div>
     </section>

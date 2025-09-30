@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        'numans': ['Numans', 'sans-serif'],
+        sans: ['Montserrat Alternates', 'sans-serif'],
+        heading: ['Montserrat Alternates', 'sans-serif'],
+        body: ['Montserrat Alternates', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

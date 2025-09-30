@@ -15,7 +15,7 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   children,
   ...props
 }) => {
-  const baseClasses = "relative overflow-hidden font-semibold transition-all duration-300 rounded-xl";
+  const baseClasses = "relative overflow-hidden font-body transition-all duration-300 rounded-xl";
   
   const variants = {
     hero: "btn-hero",

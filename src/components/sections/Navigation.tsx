@@ -42,7 +42,7 @@ export const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
-            className="text-2xl font-bold gradient-text"
+            className="text-2xl font-heading font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
             onClick={() => handleNavClick('/')}
             style={{ cursor: 'pointer' }}
@@ -56,10 +56,10 @@ export const Navigation: React.FC = () => {
               <motion.a
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className={`transition-colors duration-300 font-medium cursor-pointer ${
+                className={`transition-colors duration-300 font-body font-medium cursor-pointer ${
                   location.pathname === item.href 
                     ? 'text-[#2B85FF]' 
-                    : 'text-[#A0AEC0] hover:text-[#2B85FF]'
+                    : 'text-white/90 hover:text-[#2B85FF]'
                 }`}
                 whileHover={{ scale: 1.1 }}
                 initial={{ opacity: 0, y: -20 }}
@@ -75,7 +75,7 @@ export const Navigation: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             {/* Coming Soon Button */}
             <motion.button
-              className="text-sm px-4 py-2 rounded-lg bg-gradient-to-r from-[#A68CFF] to-[#00D1D1] text-white shadow-lg shadow-[#A68CFF]/20 hover:shadow-[#A68CFF]/40 transition-all duration-300"
+              className="text-sm font-body px-4 py-2 rounded-lg bg-gradient-to-r from-blue-800 to-cyan-600 text-white shadow-lg shadow-blue-800/20 hover:shadow-blue-800/40 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, x: 20 }}
@@ -88,13 +88,13 @@ export const Navigation: React.FC = () => {
 
             {/* CTA Button */}
             <motion.button
-              className="btn-hero px-6 py-2 text-sm"
-              whileHover={{ scale: 1.05 }}
+              className="text-sm font-body px-4 py-2 rounded-lg bg-gradient-to-r from-blue-800 to-cyan-600 text-white shadow-lg shadow-blue-800/20 hover:shadow-blue-800/40 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-              onClick={() => handleNavClick('/contact')}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              onClick={() => navigate('/contact')}
             >
               Get Started
             </motion.button>
@@ -134,10 +134,10 @@ export const Navigation: React.FC = () => {
                         handleNavClick(item.href);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`block transition-colors duration-300 font-medium cursor-pointer ${
+                      className={`block transition-colors duration-300 font-body font-medium cursor-pointer ${
                         location.pathname === item.href 
                           ? 'text-[#2B85FF]' 
-                          : 'text-[#A0AEC0] hover:text-[#2B85FF]'
+                          : 'text-white/90 hover:text-[#2B85FF]'
                       }`}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -150,7 +150,7 @@ export const Navigation: React.FC = () => {
                   {/* Mobile Action Buttons */}
                   <div className="space-y-3 pt-4">
                     <motion.button
-                      className="w-full text-sm px-4 py-2 rounded-lg bg-gradient-to-r from-[#A68CFF] to-[#00D1D1] text-white shadow-lg shadow-[#A68CFF]/20"
+                      className="w-full text-sm font-body px-4 py-2 rounded-lg bg-gradient-to-r from-[#A68CFF] to-[#00D1D1] text-white shadow-lg shadow-[#A68CFF]/20"
                       whileTap={{ scale: 0.95 }}
                       onClick={() => {
                         navigate('/coming-soon');
@@ -160,7 +160,7 @@ export const Navigation: React.FC = () => {
                       Coming Soon
                     </motion.button>
                     <motion.button
-                      className="w-full btn-hero px-6 py-2 text-sm"
+                      className="w-full btn-hero font-body px-6 py-2 text-sm"
                       whileTap={{ scale: 0.95 }}
                       onClick={() => {
                         handleNavClick('/contact');

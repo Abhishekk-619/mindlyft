@@ -6,22 +6,26 @@ const features = [
   {
     title: "10+ Years Experience",
     description: "Pioneering AI solutions with deep expertise in machine learning and digital transformation.",
-    icon: "🏆"
+    icon: "🏆",
+    className: "font-heading"
   },
   {
     title: "500+ Projects Delivered",
     description: "Successfully transformed businesses across industries with cutting-edge AI implementations.",
-    icon: "🚀"
+    icon: "🚀",
+    className: "font-heading"
   },
   {
     title: "Global Reach",
     description: "Serving clients worldwide with 24/7 support and multilingual capabilities.",
-    icon: "🌍"
+    icon: "🌍",
+    className: "font-heading"
   },
   {
     title: "Innovation-First Approach",
     description: "Constantly evolving with the latest AI breakthroughs and emerging technologies.",
-    icon: "💡"
+    icon: "💡",
+    className: "font-heading"
   }
 ];
 
@@ -67,15 +71,14 @@ export const AboutSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 premium-card rounded-2xl">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold mb-5 text-white text-center">
+              className="text-3xl md:text-4xl lg:text-5xl font-heading mb-5 text-white text-center">
               About <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">Mindlyft AI</span>
-            
             </motion.h2>
           
             <motion.div
@@ -83,7 +86,7 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-[#A0AEC0] leading-relaxed space-y-6 max-w-4xl mx-auto"
+              className="text-xl md:text-2xl text-white/90 leading-relaxed space-y-6 max-w-4xl mx-auto text-center"
             >
               <p>At MindLyft, we are redefining the way businesses embrace technology.</p>
               <p>With a foundation built on AI, automation, and advanced analytics, we craft solutions that unlock growth and efficiency.</p>
@@ -92,7 +95,6 @@ export const AboutSection: React.FC = () => {
               <p>From startups to enterprises, we partner with clients to transform ideas into real-world impact.</p>
               <p>Together, we are shaping the digital future—today.</p>
             </motion.div>
-         
         </div>
 
         {/* Stats Section */}

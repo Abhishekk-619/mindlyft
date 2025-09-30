@@ -90,14 +90,16 @@ export const ServicesSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold mb-5 text-white text-center">
+            className="text-3xl md:text-4xl lg:text-5xl font-heading mb-5 text-white/95 text-center">
             Transformative <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">AI Solutions</span>
-            
           </motion.h2>
-          <p className="text-xl text-[#A0AEC0] text-center mb-12">
+          <p className="text-xl text-white/90 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI services designed to revolutionize your business processes, 
             enhance decision-making, and drive unprecedented growth in the digital era.
           </p>
+
+          {/* Video Background */}
+          
         </div>
 
         {/* Services Grid */}
@@ -149,11 +151,11 @@ export const ServicesSection: React.FC = () => {
                 </motion.div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#2B85FF] transition-colors duration-300">
+                <h3 className="text-2xl font-heading text-white mb-4 group-hover:text-[#2B85FF] transition-colors duration-300">
                   {service.title}
                 </h3>
                 
-                <p className="text-[#A0AEC0] leading-relaxed mb-6">
+                <p className="text-[#A0AEC0] font-body leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -196,18 +198,22 @@ export const ServicesSection: React.FC = () => {
               Join the AI revolution and unlock your organization's full potential with our 
               comprehensive suite of intelligent solutions.
             </p>
-            <motion.button
-              className="btn-hero px-6 py-2 text-sm text-white inline-flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-              onClick={handleConsultationClick}
-            >
-              Schedule AI Consultation
-              <ArrowUpRight className="w-4 h-4" />
-            </motion.button>
+            <div className="flex justify-center items-center h-full">
+  <motion.button
+    className="text-lg font-body px-6 py-2 rounded-lg bg-gradient-to-r from-blue-800 to-cyan-600 text-white shadow-lg shadow-blue-800/20 hover:shadow-blue-800/40 transition-all duration-300 flex items-center gap-2"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    initial={{ opacity: 0, x: 20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.3, delay: 0.5 }}
+    onClick={handleConsultationClick}
+  >
+    <span>Schedule AI Consultation</span>
+    <ArrowUpRight className="w-6 h-6" />
+  </motion.button>
+</div>
+
+
           </div>
         </motion.div>
       </div>

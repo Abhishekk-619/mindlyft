@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { VideoBackground } from "@/components/backgrounds/VideoBackground";
 import { AnimatedText } from "@/components/ui/animated-text";
 
 interface CountdownProps {
@@ -63,8 +62,16 @@ export const ComingSoon: React.FC = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <VideoBackground videoSrc="/Image_to_Cinematic_Video.mp4" />
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/cs.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}
+      />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/80" />
@@ -82,63 +89,23 @@ export const ComingSoon: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold mb-5 text-white text-center">
+              className="text-4xl md:text-5xl lg:text-6xl font-heading mb-5 text-white text-center">
               Coming <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">Soon</span>
-            
-            </motion.h2>
+          </motion.h2>
           
           <motion.p
-            className="text-xl md:text-2xl text-[#A0AEC0] max-w-3xl mx-auto mb-12"
+            className="text-xl md:text-2xl font-body text-[#A0AEC0] max-w-3xl mx-auto mb-12 text-white/90"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
-            We're working hard to bring you something amazing. Stay tuned!
+            Mindlyft is preparing to launch its innovative <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">EdTech platform</span>, designed to empower students with cutting-edge knowledge in Artificial Intelligence and emerging technologies. Stay tuned for the future of learning.
           </motion.p>
         </motion.div>
 
-        <Countdown targetDate={launchDate} />
-
-        {/* Features Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          {[
-            {
-              title: "AI-Powered Solutions",
-              description: "Cutting-edge artificial intelligence and machine learning capabilities."
-            },
-            {
-              title: "Smart Automation",
-              description: "Streamline your business processes with intelligent automation."
-            },
-            {
-              title: "Data Analytics",
-              description: "Advanced analytics and insights for informed decision-making."
-            },
-            {
-              title: "24/7 Support",
-              description: "Round-the-clock expert assistance and technical support."
-            }
-          ].map((feature, index) => (
-            <motion.div
-              key={index}
-              className="premium-card p-6 rounded-xl text-left"
-              whileHover={{ scale: 1.02 }}
-            >
-              <h3 className="text-xl font-semibold mb-2 text-primary">{feature.title}</h3>
-              <p className="text-[#A0AEC0]">{feature.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Back to Home Button */}
         <motion.button
           onClick={() => navigate('/')}
-          className="mt-12 mb-8 px-8 py-3 rounded-xl bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] text-white font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
+          className="text-lg font-body px-4 py-2 rounded-lg bg-gradient-to-r from-blue-800 to-cyan-600 text-white shadow-lg shadow-blue-800/20 hover:shadow-blue-800/40 transition-all duration-300"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}
