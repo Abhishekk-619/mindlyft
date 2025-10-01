@@ -29,14 +29,30 @@ export const HeroSection: React.FC = () => {
         <div className="space-y-4 mb-12">
           <AnimatedText
             variant="gradient"
-            className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold leading-tight md:leading-tight bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] text-transparent bg-clip-text"
+            className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold leading-tight md:leading-tight"
             delay={0.5}
           >
-            <div className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">Shaping Smarter</div>
-            <br className="hidden md:block" />
-            <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent"> Businesses with</div>
-            <br className="hidden md:block" />
-            <div className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">AI Innovation</div>
+            {/* Mobile View */}
+            <div className="flex flex-col items-center gap-2 md:hidden">
+              <div className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+                Shaping Smarter
+              </div>
+              <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">
+                Business with
+              </div>
+              <div className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">
+                AI Innovation
+              </div>
+            </div>
+            {/* Web View */}
+            <div className="hidden md:flex md:flex-col md:items-center md:gap-3">
+              <div className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+                Shaping Smarter Business with
+              </div>
+              <div className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">
+                AI Innovation
+              </div>
+            </div>
           </AnimatedText>
         </div>
 

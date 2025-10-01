@@ -62,9 +62,9 @@ export const ComingSoon: React.FC = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with reduced opacity */}
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 opacity-80"
         style={{
           backgroundImage: "url('/cs.jpg')",
           backgroundSize: "cover",
@@ -73,8 +73,8 @@ export const ComingSoon: React.FC = () => {
         }}
       />
       
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/80" />
+      {/* Enhanced Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/60 to-background/90" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
@@ -93,19 +93,22 @@ export const ComingSoon: React.FC = () => {
               Coming <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">Soon</span>
           </motion.h2>
           
-          <motion.p
-            className="text-xl md:text-2xl font-body text-[#A0AEC0] max-w-3xl mx-auto mb-12 text-white/90"
+          {/* Description with blurred background */}
+          <motion.div
+            className="relative p-6 md:p-8 rounded-2xl overflow-hidden backdrop-blur-md bg-white/5 border border-white/10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Mindlyft is preparing to launch its innovative <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">EdTech platform</span>, designed to empower students with cutting-edge knowledge in Artificial Intelligence and emerging technologies. Stay tuned for the future of learning.
-          </motion.p>
+            <p className="text-xl md:text-2xl font-body text-white/90 max-w-3xl mx-auto">
+              Mindlyft is preparing to launch its innovative <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">EdTech platform</span>, designed to empower students with cutting-edge knowledge in Artificial Intelligence and emerging technologies. Stay tuned for the future of learning.
+            </p>
+          </motion.div>
         </motion.div>
 
         <motion.button
           onClick={() => navigate('/')}
-          className="text-lg font-body px-4 py-2 rounded-lg bg-gradient-to-r from-blue-800 to-cyan-600 text-white shadow-lg shadow-blue-800/20 hover:shadow-blue-800/40 transition-all duration-300"
+          className="text-lg font-body px-6 py-3 rounded-lg bg-gradient-to-r from-blue-800 to-cyan-600 text-white shadow-lg shadow-blue-800/20 hover:shadow-blue-800/40 transition-all duration-300"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}

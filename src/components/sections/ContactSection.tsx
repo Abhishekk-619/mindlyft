@@ -141,8 +141,7 @@ export const ContactSection: React.FC = () => {
             </motion.h2>
       
             <p className="text-xl text-white/90 text-center mb-12 max-w-3xl mx-auto">
-              Ready to transform your business with AI? Let's discuss how our solutions 
-              can drive your success. Our experts are standing by to help.
+              Ready to transform your business with AI? Our experts are standing by to help.
             </p>
           
         </div>
@@ -190,12 +189,12 @@ export const ContactSection: React.FC = () => {
                 </motion.div>
 
                 <motion.div 
-                  className="flex items-center space-x-4"
+                  className="flex items-start space-x-4"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center">
-                    <MapPinIcon className="w-6 h-6" />
+                  <div className="w-12 h-12 bg-[#2B85FF]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPinIcon className="w-7 h-7 stroke-[1.5]" />
                   </div>
                   <div>
                     <p className="font-semibold text-white">Visit Us</p>
