@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, icon, items }) => (
     </div>
     <ul className="space-y-2">
       {items.map((item, index) => (
-        <li key={index} className="text-white/80 font-body text-sm flex items-start gap-2">
+        <li key={index} className="text-white font-body text-sm flex items-start gap-2">
           <span className="text-cyan-400 mt-1">•</span>
           {item}
         </li>
@@ -188,7 +188,7 @@ export const ComingSoon: React.FC = () => {
           </motion.div>
 
           {/* Service Categories Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-white">
             {serviceCategories.map((category, index) => (
               <ServiceCard
                 key={index}
