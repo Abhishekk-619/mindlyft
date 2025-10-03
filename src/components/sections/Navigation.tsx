@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 export const Navigation: React.FC = () => {
@@ -47,7 +47,12 @@ export const Navigation: React.FC = () => {
             onClick={() => handleNavClick('/')}
             style={{ cursor: 'pointer' }}
           >
-            Mindlyft AI
+            <Link to="/" className="flex items-center space-x-2">
+              <img src="/lg.png" alt="MindLyft AI Logo" className="w-8 h-8 object-contain" />
+              <span className="text-xl font-bold text-white">
+                MindLyft AI
+              </span>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation Links */}

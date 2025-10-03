@@ -34,22 +34,22 @@ export const HeroSection: React.FC = () => {
           >
             {/* Mobile View */}
             <div className="flex flex-col items-center gap-2 md:hidden">
-              <div className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+              <div className="text-white">
                 Shaping Smarter
               </div>
-              <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">
+              <div className="text-white">
                 Business with
               </div>
-              <div className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">
+              <div className="text-white">
                 AI Innovation
               </div>
             </div>
             {/* Web View */}
             <div className="hidden md:flex md:flex-col md:items-center md:gap-3">
-              <div className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+              <div className="text-white">
                 Shaping Smarter Business with
               </div>
-              <div className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-400 bg-clip-text text-transparent">
+              <div className="text-white">
                 AI Innovation
               </div>
             </div>

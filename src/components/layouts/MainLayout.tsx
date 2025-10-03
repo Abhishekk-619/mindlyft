@@ -9,7 +9,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
       <VideoBackground
-        videoSrc="/bgmain.mp4"
+        videoSrc="/main.mp4"
         zIndex={-1}
         opacity={0.8}
         brightness={0.5}

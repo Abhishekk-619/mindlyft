@@ -167,16 +167,7 @@ export const ServicesSection: React.FC = () => {
                 />
 
                 {/* Bottom Border */}
-                <motion.div
-                  className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${service.gradient} rounded-full`}
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "100%" }}
-                  transition={{
-                    duration: 1,
-                    delay: index * 0.1
-                  }}
-                  viewport={{ once: true }}
-                />
+                
               </div>
             </motion.div>
           ))}

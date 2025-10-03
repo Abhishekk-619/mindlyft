@@ -88,9 +88,12 @@ export const Footer: React.FC = () => {
             {/* Company Info */}
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <div className="mb-6">
-                <h3 className="text-3xl font-heading font-bold mb-4 bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent">
-                  Mindlyft AI
-                </h3>
+                <div className="flex items-center space-x-2 mb-4">
+                  <img src="/lg.png" alt="MindLyft AI Logo" className="w-8 h-8 object-contain" />
+                  <h3 className="text-3xl font-heading font-bold bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent">
+                    MindLyft AI
+                  </h3>
+                </div>
                 <p className="text-white/90 font-body leading-relaxed mb-6">
                   Transforming businesses through intelligent AI solutions. 
                   We specialize in cutting-edge automation, analytics, and 
@@ -170,9 +173,10 @@ export const Footer: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+            
             <div className="text-white/90 font-body text-center">
-              © 2025 Mindlyft AI. All rights reserved.<span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent"> Designed and Developed by Sarthi Labs.</span> 
+              © 2025 MindLyft AI. All rights reserved.<span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent"> Designed and Developed by Sarthi Labs.</span> 
             </div>
           </div>
         </motion.div>
