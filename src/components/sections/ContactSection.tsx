@@ -156,7 +156,7 @@ export const ContactSection: React.FC = () => {
           >
             <div className="premium-card rounded-2xl p-8 h-full">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">Let's Start a Conversation</span>
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent text-white">Let's Start a Conversation</span>
               </h3>
               
               <div className="space-y-6">
@@ -228,7 +228,7 @@ export const ContactSection: React.FC = () => {
           >
             <div className="premium-card rounded-2xl p-8">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">Send us a Message</span>
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent text-white">Send us a Message</span>
               </h3>
 
               <motion.form 
