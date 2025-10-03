@@ -184,7 +184,7 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-white">Call Us</p>
-                    <p className="text-[#A0AEC0]">+91-9764221999 OR +91-8530888886</p>
+                    <p className="text-[#A0AEC0]">+91-9764221999 OR +91-8530888996</p>
                   </div>
                 </motion.div>
 
