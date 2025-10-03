@@ -78,7 +78,7 @@ export const AboutSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="text-3xl md:text-4xl lg:text-5xl font-heading mb-5 text-white text-center">
-              About <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">MindLyft AI</span>
+              About MindLyft AI
             </motion.h2>
           
             <motion.div

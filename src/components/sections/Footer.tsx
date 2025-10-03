@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
               <div className="mb-6">
                 <div className="flex items-center space-x-2 mb-4">
                   <img src="/lg.png" alt="MindLyft AI Logo" className="w-8 h-8 object-contain" />
-                  <h3 className="text-3xl font-heading font-bold bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent">
+                  <h3 className="text-3xl font-heading font-bold bg-gradient-to-r from-[#2B85FF] via-[#A68CFF] to-[#00D1D1] bg-clip-text text-transparent text-white">
                     MindLyft AI
                   </h3>
                 </div>
@@ -176,7 +176,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
             
             <div className="text-white/90 font-body text-center">
-              © 2025 MindLyft AI. All rights reserved.<span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent"> Designed and Developed by Sarthi Labs.</span> 
+              © 2025 MindLyft AI. All rights reserved.<span className="bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 bg-clip-text text-transparent"> Designed and Developed by Sarthi Labs.</span> 
             </div>
           </div>
         </motion.div>

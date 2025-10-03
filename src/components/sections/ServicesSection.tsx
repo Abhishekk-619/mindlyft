@@ -91,7 +91,7 @@ export const ServicesSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             className="text-3xl md:text-4xl lg:text-5xl font-heading mb-5 text-white/95 text-center">
-            Transformative <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-400 bg-clip-text text-transparent">AI Solutions</span>
+            Transformative AI Solutions
           </motion.h2>
           <p className="text-xl text-white/90 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI services designed to revolutionize your business processes, 
