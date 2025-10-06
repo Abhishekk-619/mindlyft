@@ -61,7 +61,7 @@ export const Navigation: React.FC = () => {
               <motion.a
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className={`transition-colors duration-300 font-body font-medium cursor-pointer ${
+                className={`text-white transition-colors duration-300 font-body font-medium cursor-pointer ${
                   location.pathname === item.href 
                     ? 'text-[#2B85FF]' 
                     : 'text-white/90 hover:text-[#2B85FF]'

@@ -148,7 +148,7 @@ export const ComingSoon: React.FC = () => {
       <div 
         className="absolute inset-0 z-0 opacity-80"
         style={{
-          backgroundImage: "url('/cs.jpg')",
+          backgroundImage: "url('/wom.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
@@ -156,7 +156,6 @@ export const ComingSoon: React.FC = () => {
       />
       
       {/* Enhanced Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/60 to-background/90" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-7xl mx-auto px-6">

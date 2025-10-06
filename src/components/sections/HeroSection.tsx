@@ -14,7 +14,6 @@ export const HeroSection: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background/80" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6">
